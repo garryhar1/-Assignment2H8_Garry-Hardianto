@@ -18,7 +18,7 @@ const ema = document.getElementById("ema")
 
 //container
 const hilang = document.getElementById("con")
-let validEmail = false
+let validEmail = Boolean
 
 
 function ValidateEmail() {
@@ -26,10 +26,10 @@ function ValidateEmail() {
 
     if (ema.value.match(validRegex)) {
         alert("Valid email address!");
-        validEmail = true
+        validEmail = true;
     } else {
         alert("Invalid email address!");
-        validEmail = false
+        validEmail = false;
     }
 }
 //button
@@ -45,6 +45,7 @@ if (validEmail) {
         us.innerHTML = usi.value
         lo.innerHTML = lok.value
         pe.innerHTML = pen.value
+        em.innerHTML = ema.value
         // console.log(ema, "==> INI EMA");
         // console.log(ema.value, "==> INI HASILNYA");
     
