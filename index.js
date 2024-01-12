@@ -18,49 +18,37 @@ const ema = document.getElementById("ema")
 
 //container
 const hilang = document.getElementById("con")
-let validEmail = Boolean
 
 
 function ValidateEmail() {
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (ema.value.match(validRegex)) {
-        alert("Valid email address!");
-        validEmail = true;
-    } else {
-        alert("Invalid email address!");
-        validEmail = false;
-    }
-}
-//button
-
-const element = document.getElementById("myBtn");
-
-if (validEmail) {
-    element.addEventListener("click", function () {
-        console.log(validEmail, "==> APA");
-        FullName.innerHTML = fullname.value
-        ro.innerHTML = role.value
-        av.innerHTML = ava.value
-        us.innerHTML = usi.value
-        lo.innerHTML = lok.value
-        pe.innerHTML = pen.value
-        em.innerHTML = ema.value
+        element.addEventListener("click", function () {
+            alert("Change Data");
+        // console.log(validEmail, "==> APA");
+            FullName.innerHTML = fullname.value
+            ro.innerHTML = role.value
+            av.innerHTML = ava.value
+            us.innerHTML = usi.value
+            lo.innerHTML = lok.value
+            pe.innerHTML = pen.value
+            em.innerHTML = ema.value
         // console.log(ema, "==> INI EMA");
         // console.log(ema.value, "==> INI HASILNYA");
     
         // if (!ValidateEmail()) {
         //     em.innerHTML = ema.value + "@gmail.com"
         // }
-        fullname.value = ""
-        role.value = ""
-        ava.value = ""
-        usi.value = ""
-        lok.value = ""
-        pen.value = ""
-        ema.value = ""
-        // element.style.display = 'none';
-        // hilang.style.display = 'none';
+            fullname.value = ""
+            role.value = ""
+            ava.value = ""
+            usi.value = ""
+            lok.value = ""
+            pen.value = ""
+            ema.value = ""
+            element.style.display = 'none';
+            hilang.style.display = 'none';
         // console.log(validEmail, '->> validate email')
         // if (validEmail == false) {
         //     em.innerHTML = ema.value + "@gmail.com"
@@ -70,8 +58,53 @@ if (validEmail) {
         // }
         
     })
-} else {
-    element.addEventListener("click", function () {
-        alert("SALAH");
-    })
+    } else{
+        element.addEventListener("click", function () {
+            alert("Invalid email address!");
+            window.location.reload();
+        })
+    }
 }
+//button
+
+const element = document.getElementById("myBtn");
+
+// if (validEmail) {
+//     element.addEventListener("click", function () {
+//         console.log(validEmail, "==> APA");
+//         FullName.innerHTML = fullname.value
+//         ro.innerHTML = role.value
+//         av.innerHTML = ava.value
+//         us.innerHTML = usi.value
+//         lo.innerHTML = lok.value
+//         pe.innerHTML = pen.value
+//         em.innerHTML = ema.value
+//         // console.log(ema, "==> INI EMA");
+//         // console.log(ema.value, "==> INI HASILNYA");
+    
+//         // if (!ValidateEmail()) {
+//         //     em.innerHTML = ema.value + "@gmail.com"
+//         // }
+//         fullname.value = ""
+//         role.value = ""
+//         ava.value = ""
+//         usi.value = ""
+//         lok.value = ""
+//         pen.value = ""
+//         ema.value = ""
+//         // element.style.display = 'none';
+//         // hilang.style.display = 'none';
+//         // console.log(validEmail, '->> validate email')
+//         // if (validEmail == false) {
+//         //     em.innerHTML = ema.value + "@gmail.com"
+//         // }
+//         // else {
+//         //     em.innerHTML = ema.value
+//         // }
+        
+//     })
+// } else if(!validEmail){
+//     element.addEventListener("click", function () {
+//         alert("SALAH");
+//     })
+// }
