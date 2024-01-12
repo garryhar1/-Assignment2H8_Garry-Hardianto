@@ -6,6 +6,13 @@
     <title>Test</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">\
 </head>
+<style>
+  @media only screen and (min-width: 354x) {
+  .container-sm {
+    width: 350px;
+  }
+}
+</style>
 <body> 
     <nav class="navbar navbar-expand navbar-transparent">
           <div class="container d-flex justify-content-end" >
@@ -39,11 +46,11 @@
                 <div class="row">
                     <!-- <div class="d-flex"> -->
                         <div class="col-md-2" style="margin-left: auto; margin-right: auto;">
-                            <img src="/img/img.jpg" alt="muka" style="width: 150px; height: 100px; margin-top: 50px;">
+                            <img src="/test1/img/img.jpg" alt="muka" style="width: 100px; height: 100px; margin-top: 50px;">
                         </div>
                         <div class="col-md-3" style="margin-left: auto; margin-right: auto;">
-                            <h4 style="margin-top: 10px;">Garry Hardianto</h4>
-                            <p style="font-size: 10px;">Back End Engineer</p>
+                            <h4 style="margin-top: 30px;" id="fullname">Garry Hardianto</h4>
+                            <p style="font-size: 10px;" id="ro">Back End Engineer</p>
                             <button type="button" class="btn btn-primary" style="font-size: 10px;">Kontak</button>
                             <button type="button" class="btn btn-outline-success" style="font-size: 10px;">Resume</button>
                         </div>
@@ -52,22 +59,22 @@
                                 <tbody>
                                   <tr>
                                     <th style="font-size: 10px;">Availability</th>
-                                    <td style="font-size: 10px;">Full Time</td>
+                                    <td style="font-size: 10px;" id="av">Full Time</td>
                                   </tr>
                                     <th style="font-size: 10px;">Usia</th>
-                                    <td style="font-size: 10px;">19</td>
+                                    <td style="font-size: 10px;" id="us">19</td>
                                   </tr>
                                   <tr>
                                     <th style="font-size: 10px;">Lokasi</th>
-                                    <td style="font-size: 10px;">Jakarta</td>
+                                    <td style="font-size: 10px;" id="lo">Jakarta</td>
                                   </tr>
                                   <tr>
                                     <th style="font-size: 10px;">Pengalaman</th>
-                                    <td style="font-size: 10px;">2 Tahun</td>
+                                    <td style="font-size: 10px;" id="pe">2 Tahun</td>
                                   </tr>
                                   <tr>
                                     <th style="font-size: 10px;">Email</th>
-                                    <td style="font-size: 10px;">Hardiantogarry82@gmail.com</td>
+                                    <td style="font-size: 10px;" id="em">Hardiantogarry82@gmail.com</td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -79,38 +86,39 @@
                 </div>
             </div>
         
-            <div class="row">
+            <div class="row" id="con">
                 <div class="container-sm w-75" style=" background-color: white;">
-                    <div class="col-auto mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                        <input type="text" class="form-control" placeholder="Masukkan nama Anda">
+                    <div class="col-auto mb-3 mt-3">
+                        <h5 for="" class="form-label">Nama</h5>
+                        <input type="text" class="form-control" id="fullName" placeholder="Masukkan nama Anda">
                     </div>
                     <div class="col-auto mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Role</label>
-                        <input type="text" class="form-control" >
+                        <h5 for="" class="form-label">Role</h5>
+                        <input type="text" class="form-control" id="role" >
                     </div>
                     <div class="col-auto mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Availability</label>
-                        <input type="text" class="form-control" >
+                        <h5 for="" class="form-label">Availability</h5>
+                        <input type="text" class="form-control" id="ava">
                     </div>
                     <div class="col-auto mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Usia</label>
-                        <input type="text" class="form-control" >
+                        <h5 for="" class="form-label">Usia</h5>
+                        <input type="text" class="form-control" id="usi">
                     </div>
                     <div class="col-auto mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Lokasi</label>
-                        <input type="text" class="form-control" >
+                        <h5 for="" class="form-label">Lokasi</h5>
+                        <input type="text" class="form-control" id="lok">
                     </div>
                     <div class="col-auto mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Years Experience</label>
-                        <input type="text" class="form-control">
+                        <h5 for="" class="form-label">Years Experience</h5>
+                        <input type="text" class="form-control" id="pen">
                     </div>
                     <div class="col-auto mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="text" class="form-control">
+                        <h5 for="" class="form-label">Email</h5>
+                        <input type="email" class="form-control"  onblur="ValidateEmail()" id="ema">
+                        <p style="font-size: 10px; margin-top: 5px;">*Enter untuk validasi</p>
                     </div>
                     <div class="col-auto d-grid gap-2 mb-3">
-                        <button type="button" class="btn btn-sm" style="background-color: green;">Submit</button>
+                        <button type="button" class="btn btn-sm" id="myBtn" style="background-color: green; color: white;" >Submit</button>
                     </div>
                 </div>
             </div>
@@ -118,5 +126,6 @@
     </div>
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>
